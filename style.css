@@ -1,0 +1,429 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to top, #000000, #000000);
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to top, #1d1d1d, #1b1b1b);
+    color: white;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+
+.banner1{
+    background-image: url('../multimedia/banner.jpg');
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 10px;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 80px;
+}
+
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1000;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 50px 0px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.foto, .foto1 {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.contenedor {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, #370b00, #a11300);
+    margin: 0 auto;
+}
+
+.video-container {
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 30px;
+}
+
+#miVideo{
+    width: 1400px;
+    height: auto;
+}
+
+#motor{ 
+    background-image: url('../multimedia/motor.png');
+    width: 100%;
+    height: 1100px;
+    background-size: cover;
+    background-position: center;
+}
+
+h1, h2, h3, h4 {
+    color: white;
+    text-align: center;
+    margin: 0px 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 3.0rem;
+    text-align: left;
+    padding: 40px;
+    padding-top: 40px;
+}
+
+h5{
+    font-size: 40px;
+    padding-right: 40px;
+}
+
+p, .p2, .p3, .p4, .p5 {
+    font-size: 1.45rem;
+    color: white;
+    margin: 10px 0;
+    padding: 40px;
+    text-align: left;
+}
+
+
+p{
+    font-size: 1.45rem;
+    justify-content: center;
+}
+
+.p2, .p3, .p4 {
+    font-size: 1.45rem;
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin: 10px 1%;
+}
+
+.p5 {
+    margin: 20px 0;
+    font-size: 28px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+li {
+    display: inline;
+    margin-right: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover{
+    background-color: #2f2f2f;
+    border-radius: 5px;
+}
+
+.sep{
+    margin: 30px;
+}
+
+.fondo2{
+    background: linear-gradient(to top, #111111, #323232);
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.chart-container {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-right: 40px;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-color: rgba(27, 27, 27, 0.792);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+}
+
+.bar {
+    transition: fill 0.3s ease;
+}
+
+.bar:hover {
+    fill: #ffffff;
+}
+
+.label {
+    font-size: 14px;
+    fill: #ffffff;
+}
+
+.title {
+    font-size: 20px;
+    fill: #ffffff;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+canvas {
+    border: 2px solid white;
+}
+
+.h5{
+    font-size: 2.0rem;
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+footer{
+    background: linear-gradient(to top, #1d1d1d, #1b1b1b);
+    padding: 16px;
+    text-align: left;
+    text-align: center;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1000;
+}
+
+.canvas1{
+    background: linear-gradient(to top,  #323232, #111111);
+    width: 100%;
+    height: 250px;
+
+
+}
+
+
+#canvas-container {
+    position: relative;
+    text-align: center;
+    
+}
+canvas {
+    border: 5px solid #f00000;
+    background-color: rgba(255, 0, 0, 0.54);
+    border-radius: 20px;
+    padding: 5px;
+
+}
+#logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+#logo-img {
+    max-width: 200px; 
+    max-height: 200px;
+    
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+#imagePlaceholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Ajusta este tamaño según necesites */
+    height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100vh;
+        background: #1d1d1d;
+        flex-direction: column;
+        padding: 4rem 1rem 1rem 1rem;
+        z-index: 999;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        transition: transform 0.3s ease;
+    }
+    
+    nav ul.active {
+        display: flex;
+        transform: translateX(0);
+    }
+    
+    nav ul li {
+        margin: 15px 0;
+    }
+    #miVideo {
+        width: 100%;
+    }
+    
+    .logo {
+        margin: 15px 0 0 0;
+        width: 80%;
+    }
+    
+    .p2, .p3, .p4 {
+        width: 100%;
+        display: block;
+        margin: 10px 0;
+        padding: 20px;
+    }
+    
+    .fondo2 {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+    
+    .chart-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    svg {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    #motor {
+        height: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    h4 {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+    
+    p, .p5 {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    
+    .sep {
+        margin: 15px 0;
+    }
+    
+    nav ul {
+        width: 85%;
+    }
+}

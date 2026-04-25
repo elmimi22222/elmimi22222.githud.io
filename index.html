@@ -1,67 +1,236 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Mitel Bi</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; }
-        header { text-align: center; padding: 40px 0; background: #2c3e50; color: white; border-radius: 8px; margin-bottom: 20px; }
-        h1 { margin: 0; font-size: 2.5rem; }
-        .tagline { font-size: 1.1rem; opacity: 0.8; }
-        section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
-        .skills span { background: #3498db; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; margin: 5px; display: inline-block; }
-        .project { margin-bottom: 15px; }
-        .project-title { font-weight: bold; color: #2980b9; }
-        footer { text-align: center; font-size: 0.8rem; color: #777; margin-top: 40px; }
-        a { color: #3498db; text-decoration: none; }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Ferrari 812 Superfast</title>
 </head>
 <body>
 
-<header>
-    <h1>Mitel Bi</h1>
-    <p class="tagline">Tecnólogo en Desarrollo de Software | Full Stack</p>
-</header>
+    <header>
+        <button class="menu-toggle">☰</button>
+        <nav>
+            <ul>
+                <li><a style="background-color: red; padding: 10px; border-radius: 5px;" href="#">SUPERCARS</a></li>
+                <li><a href="#inf">INFORMACION</a></li>
+                <li><a href="#motor">MOTOR</a></li>
+                <li><a href="#comparativa">COMPARATIVA</a></li>
+                <li><a >SEARCH</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section id="sobre-mi">
-    <h2>Sobre Mí</h2>
-    <p>Desarrollador enfocado en soluciones eficientes y escalables. Especializado en la creación de APIs modernas y despliegue de aplicaciones con contenedores.</p>
-</section>
 
-<section id="habilidades">
-    <h2>Habilidades Técnicas</h2>
-    <div class="skills">
-        <span>Python (FastAPI)</span>
-        <span>JavaScript (Angular)</span>
-        <span>Docker</span>
-        <span>Git / GitHub</span>
-        <span>Arquitectura de Software</span>
+    <div class="banner1">
+       <a  class="alink" href="index.html"><img class="logo" src="multimedia/logo.jpg" width="600px" height="auto"></a> <br><br> 
+        <img class="logo" src="multimedia/SuperCars.png" width="600px" height="auto" style=" background-color: rgba(29, 29, 29, 0.623);padding:20px; border-radius: 40px;">
+        <h4>
+            <span style="color: rgb(255, 255, 255); font-size: 50px;">BIENVENIDOS A SUPERCARS</span><br><br>
+            ¿Que es SuperCars?
+        </h4>
+        <p>
+            SuperCars es una pagina encargada de brindar <br>
+            informacion detallada de todo tipo de autos deportivos.  <br>
+        </p>
+
+
+
     </div>
-</section>
 
-<section id="proyectos">
-    <h2>Proyectos Destacados</h2>
-    <div class="project">
-        <div class="project-title">🚀 Migración de Portal de Pagos</div>
-        <p>Migración de arquitectura SPA a Angular 20, optimizando el rendimiento y la mantenibilidad.</p>
+    <div class="banner">   
+            <video id="miVideo" controls>
+                <source src="multimedia/Ferrari 812.mp4" type="video/mp4">
+            </video>
     </div>
-    <div class="project">
-        <div class="project-title">⚙️ Automatización de Reportes (WOM)</div>
-        <p>Implementación de endpoints con FastAPI para generación de archivos Excel y envío masivo por SMTP.</p>
-    </div>
-</section>
 
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p>📧 Email: <a href="mailto:luismoya02062004@email.com">luismoya02062004@email.com</a></p>
-    <p>🔗 LinkedIn: <a href="#">linkedin.com/in/tu-perfil</a></p>
-</section>
+    <div class="sep">   
+        <h1>
+            Ferrari 812
+        </h1>
+        <h2>
+            CAMBIO AL 12° DIMENSION
+        </h2>
+    </div>
+<div id="inf"></div>
+    <div class="contenedor">
+        <h3>
+            EL MÁS PODEROSO Y RÁPIDO FERRARI <br>HASTA LA FECHA
+        </h3>
+
+        <img src="multimedia/Ferrari812.png" class="imagen">
+        <p> En la fase de desarrollo, los ingenieros de Ferrari se marcaron el objetivo de 
+            superar la potencia específica de salida del motor V12 del F12berlinetta.
+                El primer y más complicado desafío que Ferrari tiene siempre que afrontar cuando 
+                decide desarrollar un nuevo modelo es llegar más lejos aún que los logros ya obtenidos. 
+                Este reto se hace aún más duro cuando la tarea implica diseñar un nuevo motor de 12 cilindros, 
+                la unidad de potencia que alumbró el nacimiento de la gloriosa historia del Cavalino Rampante 
+                hace 7o años en 1947. En esta ocasión, la minuciosa investigación y desarrollo que realiza 
+                siempre Ferrari volcando en ingeniería todo su know-how adquirido en pista ha dado lugar al 812 Superfast, 
+                diseñado para ofrecer a sus conductores tanto prestaciones inigualables como una experiencia de conducción 
+                más excepcional y satisfactoria posible. Impulsado por sus 800 cv, 60 más que el F12berlinetta, 
+                el 812 Superfast es el Ferrari de carretera más potente y rápido jamás construido (con la excepción, 
+                por supuesto, de las series especiales limitadas de 12 cilindros con motor central trasero). 
+                El 812 Superfast abre una nueva era en la historia de los Ferrari de 12 cilindros, 
+                y lo hace tomando como base el valioso legado del F12berlinetta y F12tdf. Para exprimir al 
+                máximo esta inmensa potencia y garantizar la perfecta distribución de pesos, el coche aprovecha 
+                una estructura transeje altamente evolucionada que se acopla al motor central delantero con 
+                transmisión trasera.</p>
+
+            <p class="p2">
+                    <span style="color: rgb(161, 161, 161); font-weight: bold;">Emisiones CO2:</span>
+                    <br>
+                    <br>
+                    Bajo: 573 G/km <br>
+                    Medio: 345 G/km <br>
+                    Alto: 320 G/km <br>
+                    Extra alto: 340 G/km <br>
+                    Mezcla: 366 G/km <br>
+            </p>
+
+                <p class="p3">
+                    <span style="color: rgb(161, 161, 161); font-weight: bold;">Consumo:</span>
+                     <br>
+                    <br>
+                    Bajo: 25,2 L/100km <br>
+                    Medio: 15,2 L/100km <br>
+                    Alto: 14,1 L/100km <br>
+                    Extra alto: 15 L/100km <br>
+                    Mixto: 16,1 L/100km <br>
+                </p>
+
+                <p class="p4">
+                    Los valores mostrados de consumo de combustible y <br>
+                    emisiones de CO2 se han determinado en conformidad  <br>
+                    con el Reglamento Europeo (CE) 715/2007, en la versión <br>
+                    vigente en el momento de la homologación <br> <br>
+                    Los valores de consumo de combustible y emisiones de  <br>
+                    CO2 se refieren al ciclo WLTP. <br>
+
+                </p>
+        </div>
+
+    <div id="motor">
+        <h4>
+            <span style="color: red; font-size: 50px;">Motor</span><br><br>
+            POTENCIA DE <br> 
+            SALIDA REGISTRO <br> 
+            DE 800 CV A 8.500 RPM
+        </h4>
+        <p class="p5">
+            En la fase de desarrollo, los ingenieros de Ferrari se <br>
+            marcaron el objetivo de superar la potencia específica <br>
+            de salida del motor V12 del F12berlinetta. <br>
+        </p>
+
+        <p class="p5">
+            <span style="color: red; font-size: 40px;">Sonido del Motor</span> 
+            <br><br><br>
+                <audio controls>
+                    <source src="multimedia/V12 Ferrari 812 Superfast fitted with a Valvetronic Titanium Performance F1 High Pitched Exhaust.mp3" type="audio/mpeg">    
+                </audio>
+        </p>
+        
+        <div class="container">
+            <canvas id="myCanvas" width="200" height="200">
+            </canvas>
+            <img id="imagePlaceholder" src="multimedia/horse.webp">
+        </div>
+
+    </div>
+
+<div id="comparativa"></div>    
+<div class="fondo2">
+    <div class="tabla">
+        <h1 class="h5">
+            <span style="color: rgb(255, 255, 255); font-size: 50px;">Comparativa</span> <br><br>
+            Diferencia de velocidad maxima del Ferrari 812 superfast con otras marcas
+        </h1>
+        <p>
+            El Ferrari 812 Superfast es un verdadero ícono de la <br>
+            velocidad, diseñado para ofrecer una experiencia de <br>
+            conducción extrema. Equipado con un motor V12 <br>
+            atmosférico de 6.5 litros, este superdeportivo <br>
+            genera 800 caballos de fuerza, convirtiéndolo en el <br>
+            Ferrari de producción con motor delantero más potente  <br>
+            de la historia.
+            <br><br>
+            Gracias a su ingeniería de vanguardia y su aerodinámica  <br>
+            optimizada, el 812 Superfast alcanza una velocidad máxima  <br>
+            de 340 km/h, superando a muchos de sus rivales en la <br>
+            categoría. Su aceleración de 0 a 100 km/h en solo 2.9 <br> 
+            segundos lo coloca entre los autos más rápidos del mundo. <br>
+        </p>
+    </div>
+    <div class="chart-container">
+
+        <svg viewBox="0 0 600 500" preserveAspectRatio="xMidYMid meet">
+            
+            <text x="300" y="30" class="title">Comparativa de Velocidad Máxima</text>
+        
+       
+            <line x1="50" y1="450" x2="50" y2="50" stroke="#333" stroke-width="2" />
+            <text x="30" y="20" class="label">km/h</text>
+         
+            <text x="40" y="450" class="label">0</text>
+            <text x="40" y="350" class="label">100</text>
+            <text x="40" y="250" class="label">200</text>
+            <text x="40" y="150" class="label">300</text>
+            <text x="40" y="50" class="label">400</text>
+        
+          
+            <line x1="50" y1="450" x2="550" y2="450" stroke="#333" stroke-width="2" />
+        
+  
+   
+            <rect x="100" y="110" width="50" height="340" fill="#FF2800" class="bar" />
+            <text x="90" y="470" class="label">Ferrari 812</text>
+        
+          
+            <rect x="200" y="120" width="50" height="330" fill="#0047AB" class="bar" />
+            <text x="190" y="470" class="label">Porsche 911</text>
+        
+           
+            <rect x="300" y="125" width="50" height="325" fill="#FFD700" class="bar" />
+            <text x="280" y="470" class="label">Huracán EVO</text>
+        
+        
+            <rect x="400" y="120" width="50" height="330" fill="#f88a03" class="bar" />
+            <text x="380" y="470" class="label">McLaren Artura</text>
+        
+           
+            <rect x="500" y="183" width="50" height="267" fill="#00FF00" class="bar" />
+            <text x="490" y="470" class="label">Tesla Plaid</text>
+        </svg>
+
+    </div>
+</div>
+
 
 <footer>
-    <p>&copy; 2026 - Creado por Mitel Bi</p>
+    Todo los Derechos Reservados &copy; SuperCars
 </footer>
+
+    <script>
+        
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'WHITE'; 
+        ctx.fillRect(0, 0, 200, 200);
+
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(0, 0, 200, 200);
+        
+    </script>
+
+   <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('active');
+    });
+</script>
+
 
 </body>
 </html>
