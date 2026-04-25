@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mitel Bi | Portafolio Pro</title>
+    <title>Mitel Bi | Full Stack Developer & Technologist</title>
     <style>
-        /* --- ESTILOS GENERALES --- */
         :root {
-            --primary: #3498db;
-            --dark: #1a1a2e;
-            --light: #f4f4f9;
-            --accent: #e94560;
+            --bg: #0a0a0c;
+            --card-bg: #16161a;
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --text: #e0e0e0;
+            --accent: #00ff88;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            overflow-x: hidden;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* --- ANIMACIONES DE ENTRADA (CSS) --- */
+        /* --- EFECTOS DE REVELACIÓN (GSAP Style) --- */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
         }
 
         .reveal.active {
@@ -35,144 +36,225 @@
             transform: translateY(0);
         }
 
-        /* --- SECCIONES --- */
-        section {
-            min-height: 80vh;
-            padding: 100px 20px;
+        /* --- NAVEGACIÓN --- */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 20px 50px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            max-width: 1000px;
-            margin: 0 auto;
+            background: rgba(10, 10, 12, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* --- HERO SECTION --- */
-        header {
+        nav .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--primary); }
+
+        /* --- HERO --- */
+        .hero {
             height: 100vh;
-            background: linear-gradient(135deg, var(--dark) 0%, #16213e 100%);
-            color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background: radial-gradient(circle at center, #1e1e26 0%, #0a0a0c 100%);
             text-align: center;
+            padding: 20px;
         }
 
-        header h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
+        .hero h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 1; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; color: #888; max-width: 600px; }
 
-        .highlight { color: var(--primary); }
+        /* --- SECCIONES GENERALES --- */
+        section { padding: 120px 10%; max-width: 1400px; margin: 0 auto; }
+        h2 { font-size: 2.5rem; margin-bottom: 50px; display: inline-block; border-bottom: 4px solid var(--primary); }
 
-        /* --- TARJETAS DE PROYECTOS --- */
+        /* --- GRID DE SERVICIOS/SKILLS --- */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            width: 100%;
-            margin-top: 40px;
+            gap: 30px;
         }
 
         .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--primary);
-            transition: transform 0.3s ease;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.4s;
         }
 
         .card:hover {
-            transform: scale(1.03);
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
-        /* --- SKILLS TAGS --- */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+        .card h3 { color: var(--primary); margin-bottom: 15px; }
+
+        /* --- TIMELINE (Educación/Experiencia) --- */
+        .timeline-item {
+            border-left: 2px solid var(--primary);
+            padding-left: 30px;
+            margin-bottom: 40px;
+            position: relative;
         }
 
-        .skill-tag {
-            background: var(--dark);
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px; top: 0;
+            width: 16px; height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        /* --- CONTACTO --- */
+        .contact-form {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            display: grid;
+            gap: 20px;
+            max-width: 600px;
+        }
+
+        input, textarea {
+            padding: 15px;
+            background: #25252b;
+            border: 1px solid transparent;
             color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: background 0.3s;
+            border-radius: 8px;
+            outline: none;
         }
 
-        .skill-tag:hover { background: var(--accent); }
+        input:focus { border-color: var(--primary); }
 
+        .btn {
+            padding: 15px 30px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+        footer { text-align: center; padding: 50px; color: #555; border-top: 1px solid rgba(255,255,255,0.05); }
+
+        @media (max-width: 768px) {
+            nav { padding: 20px; }
+            nav ul { display: none; }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1 class="reveal">Hola, soy <span class="highlight">Mitel Bi</span></h1>
-        <p class="reveal" style="transition-delay: 0.2s;">Tecnólogo en Software | Backend & Frontend</p>
+    <nav>
+        <div class="logo">MB.</div>
+        <ul>
+            <li><a href="#about">Sobre Mí</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#experience">Trayectoria</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1 class="reveal">Mitel <span style="color:var(--primary)">Bi</span></h1>
+        <p class="reveal" style="transition-delay: 0.2s;">Diseño experiencias digitales, construyo infraestructuras sólidas y escalables.</p>
+        <div class="reveal" style="transition-delay: 0.4s; margin-top: 30px;">
+            <a href="#contact" class="btn" style="text-decoration: none;">Trabajemos Juntos</a>
+        </div>
     </header>
 
     <section id="about">
-        <h2 class="reveal">Especialidad</h2>
-        <p class="reveal" style="text-align: center; max-width: 600px;">
-            Enfocado en la modernización de sistemas. De arquitecturas SPA a <b>Angular 20</b> 
-            y automatización de procesos con <b>FastAPI</b> y <b>Docker</b>.
+        <h2 class="reveal">Perfil Profesional</h2>
+        <p class="reveal" style="font-size: 1.3rem; color: #aaa;">
+            Soy Tecnólogo en Análisis y Desarrollo de Software. Mi enfoque se centra en la eficiencia del código y la arquitectura moderna. Me apasiona transformar problemas complejos en interfaces intuitivas y sistemas robustos.
         </p>
     </section>
 
-    <section id="projects" style="background: #ececf3; max-width: 100%;">
-        <h2 class="reveal">Proyectos Destacados</h2>
+    <section id="services" style="background: #0d0d10;">
+        <h2 class="reveal">¿Qué Ofrezco?</h2>
         <div class="grid">
             <div class="card reveal">
-                <h3>🚀 Nexus Fintech</h3>
-                <p>Documentación técnica y desarrollo de módulos para cobranzas.</p>
+                <h3>Desarrollo Full Stack</h3>
+                <p>Creación de aplicaciones web completas utilizando los frameworks más modernos del mercado.</p>
             </div>
             <div class="card reveal" style="transition-delay: 0.2s;">
-                <h3>📦 Portal de Pagos</h3>
-                <p>Migración completa a Angular 20 y contenedorización con Docker.</p>
+                <h3>Diseño de APIs</h3>
+                <p>Construcción de servicios backend rápidos, seguros y documentados bajo estándares REST.</p>
             </div>
             <div class="card reveal" style="transition-delay: 0.4s;">
-                <h3>📧 Reportes WOM</h3>
-                <p>Automatización de envío de archivos Excel mediante FastAPI.</p>
+                <h3>Cloud & Docker</h3>
+                <p>Contenedorización de aplicaciones para asegurar un despliegue ágil en cualquier entorno.</p>
             </div>
         </div>
     </section>
 
-    <section id="skills">
-        <h2 class="reveal">Stack Tecnológico</h2>
-        <div class="skills-container reveal">
-            <div class="skill-tag">Python</div>
-            <div class="skill-tag">FastAPI</div>
-            <div class="skill-tag">Angular</div>
-            <div class="skill-tag">Docker</div>
-            <div class="skill-tag">PostgreSQL</div>
+    <section id="experience">
+        <h2 class="reveal">Trayectoria</h2>
+        
+        <div class="timeline-item reveal">
+            <h4>Análisis y Desarrollo de Software</h4>
+            <p style="color: var(--primary);">SENA | 2024 - Presente</p>
+            <p>Formación especializada en metodologías ágiles, bases de datos y lógica de programación avanzada.</p>
+        </div>
+
+        <div class="timeline-item reveal" style="transition-delay: 0.2s;">
+            <h4>Desarrollador de Software (Etapa Productiva)</h4>
+            <p style="color: var(--primary);">Noviembre 2025 - Actualidad</p>
+            <p>Liderando procesos de migración tecnológica y automatización de reportes empresariales.</p>
+        </div>
+
+        <div class="timeline-item reveal" style="transition-delay: 0.3s;">
+            <h4>Educación Secundaria</h4>
+            <p style="color: var(--primary);">Alfonso López Pumarejo | 2017 - 2022</p>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 50px; background: var(--dark); color: white;">
-        <p>&copy; 2026 Mitel Bi - Valledupar, Colombia</p>
+    <section id="contact">
+        <h2 class="reveal">Hablemos</h2>
+        <div style="display: flex; gap: 50px; flex-wrap: wrap;">
+            <div class="reveal" style="flex: 1; min-width: 300px;">
+                <p>¿Tienes un proyecto en mente o buscas integrar a alguien en tu equipo? Estoy abierto a nuevas oportunidades en desarrollo.</p>
+                <br>
+                <p>📍 Valledupar, Colombia</p>
+                <p>✉️ <a href="mailto:tu-email@ejemplo.com" style="color: var(--primary);">tu-email@ejemplo.com</a></p>
+            </div>
+            
+            <form class="contact-form reveal" style="flex: 1; min-width: 300px;">
+                <input type="text" placeholder="Nombre completo">
+                <input type="email" placeholder="Correo electrónico">
+                <textarea rows="5" placeholder="Cuéntame sobre tu proyecto"></textarea>
+                <button type="button" class="btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mitel Bi. Construido con pasión y código limpio.</p>
     </footer>
 
     <script>
-        // Función que detecta el scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 }
             });
-        }, {
-            threshold: 0.1 // Se activa cuando el 10% del elemento es visible
-        });
+        }, { threshold: 0.15 });
 
-        // Aplicar a todos los elementos con la clase "reveal"
-        const revealElements = document.querySelectorAll('.reveal');
-        revealElements.forEach((el) => observer.observe(el));
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     </script>
 
 </body>
