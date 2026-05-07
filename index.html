@@ -1,121 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luiz Pineda | Estudiante de Programación & Desarrollo</title>
+    <title>Mitel Bi | Full-Stack Developer Junior</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
-    <nav>
-        <div class="logo">Dev</div>
-        <ul>
-            <li><a href="#about">Sobre Mí</a></li>
-            <li><a href="#services">Servicios</a></li>
-            <li><a href="#experience">Trayectoria</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
+    <div class="cursor-glow"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo">Mitel<span>Bi</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+            </ul>
+            <a href="mailto:luismoya02062004@gmail.com" class="cta-mini">Hablemos</a>
+        </div>
     </nav>
 
-    <header class="hero">
-        <h1>Desarrollador de Software</span></h1>
-        <h1 <span style="font-size:90px; color:var(--primary)"class="reveal" class="reveal">Luiz Pineda</h1>
-        <p  class="reveal" style="transition-delay: 0.2s;">Entusiasta de la tecnología, aprendiendo a crear aplicaciones
-            web y mejorando mis habilidades cada día.</p>
-        <div class="reveal" style="transition-delay: 0.4s; margin-top: 30px;">
-            <a href="#contact" class="btn" style="text-decoration: none;">Trabajemos Juntos</a>
+    <header id="home" class="hero-advanced">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <span class="badge fade-up">Disponible para trabajar</span>
+                <h1 class="stagger-text">Building Scalable <br><span class="gradient-text">Software Solutions</span></h1>
+                <p class="fade-up-desc">Desarrollador Junior con enfoque en arquitecturas modernas. Especialista en optimizar el flujo entre Frontend reactivo y Backends de alto rendimiento.</p>
+                <div class="hero-actions fade-up-btns">
+                    <a href="#projects" class="btn-main">Ver Proyectos</a>
+                    <a href="#experience" class="btn-ghost">Trayectoria Laboral</a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <section id="about">
-        <h2 class="reveal">Sobre Mí</h2>
-        <p class="reveal" style="font-size: 1.3rem; color: #aaa;">
-            Soy estudiante de Análisis y Desarrollo de Software. Me apasiona programar, aprender nuevas tecnologías y
-            enfrentar retos que me permitan crecer profesionalmente. Actualmente estoy construyendo proyectos personales
-            para mejorar mis habilidades en el desarrollo web.
-        </p>
-    </section>
-
-    <section id="services" style="background: #0d0d10;">
-        <h2 class="reveal">Mis Habilidades (En desarrollo)</h2>
-        <div class="grid">
-            <div class="card reveal">
-                <h3>Desarrollo Web</h3>
-                <p>Aprendiendo a crear interfaces y a darles interactividad usando HTML, CSS y JavaScript.</p>
+    <main>
+        <!-- Sección Sobre Mí -->
+        <section id="about" class="section container">
+            <div class="about-wrapper">
+                <div class="about-info">
+                    <h2 class="section-tag">/ Perfil Profesional</h2>
+                    <p class="large-text">
+                        Soy un apasionado de la tecnología basado en <strong>Bogotá</strong>. Mi formación en el SENA me permitió transformar la curiosidad técnica en habilidades sólidas de ingeniería. Me enfoco en escribir código limpio, mantenible y eficiente.
+                    </p>
+                </div>
             </div>
-            <div class="card reveal" style="transition-delay: 0.2s;">
-                <h3>Lógica y Backend</h3>
-                <p>Comprendiendo cómo funcionan los datos detrás de escena y dando mis primeros pasos en la creación de
-                    APIs.</p>
+        </section>
+
+        <!-- Sección Experiencia -->
+        <section id="experience" class="section bg-dark">
+            <div class="container">
+                <h2 class="section-tag">/ Experiencia</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-header">
+                            <h3>Alo Credit</h3>
+                            <span class="date">Nov 2025 — Mayo 2026</span>
+                        </div>
+                        <h4 class="role-title">Aprendiz Desarrollador de Software</h4>
+                        <div class="experience-content">
+                            <div class="exp-block">
+                                <h5>Frontend</h5>
+                                <p>Optimización de interfaces en Angular y TypeScript, mejorando la experiencia de usuario en plataformas internas.</p>
+                            </div>
+                            <div class="exp-block">
+                                <h5>Backend & Devops</h5>
+                                <p>Desarrollo de APIs con FastAPI y orquestación de contenedores mediante Docker para despliegues ágiles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card reveal" style="transition-delay: 0.4s;">
-                <h3>Trabajo en Equipo</h3>
-                <p>Familiarizándome con Git, control de versiones y el trabajo colaborativo en proyectos de
-                    programación.</p>
+        </section>
+
+        <!-- Sección Habilidades Avanzada -->
+        <section id="skills" class="section container">
+            <h2 class="section-tag">/ Tecnologías</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="tags">
+                        <span>Angular</span> <span>TypeScript</span> <span>JavaScript</span> <span>HTML5/CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="tags">
+                        <span>Python</span> <span>FastAPI</span> <span>Node.js</span> <span>SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Herramientas</h3>
+                    <div class="tags">
+                        <span>Docker</span> <span>Git</span> <span>GitHub Pages</span> <span>Linux</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="experience">
-        <h2 class="reveal">Mi Camino</h2>
-
-        <div class="timeline-item reveal">
-            <h4>Análisis y Desarrollo de Software</h4>
-            <p style="color: var(--primary);">SENA | 2024 - Presente</p>
-            <p>Estudiando conceptos fundamentales, bases de datos y lógica de programación para construir una base
-                sólida.</p>
-        </div>
-
-        <div class="timeline-item reveal" style="transition-delay: 0.2s;">
-            <h4>Apoyo en Desarrollo (Etapa Productiva)</h4>
-            <p style="color: var(--primary);">Noviembre 2025 - Actualidad</p>
-            <p>Aplicando lo aprendido en un entorno real, apoyando en tareas de desarrollo y aprendiendo del equipo de
-                trabajo.</p>
-        </div>
-
-        <div class="timeline-item reveal" style="transition-delay: 0.3s;">
-            <h4>Educación Secundaria</h4>
-            <p style="color: var(--primary);">Alfonso López Pumarejo | 2017 - 2022</p>
-        </div>
-    </section>
-
-    <section id="contact" style="text-align: center;">
-        <h2 class="reveal">Hablemos</h2>
-        <div class="card reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.1rem; margin-bottom: 30px;">
-                ¿Buscas integrar a un desarrollador junior o aprendiz en tu equipo? Estoy muy motivado por encontrar mi
-                primera oportunidad laboral y seguir aprendiendo.
-            </p>
-            <div
-                style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 30px; font-size: 1.1rem;">
-                <p>📍 Bogota, Colombia</p>
-                <p>✉️ <a href="mailto:luismoya02062004@gmail.com"
-                        style="color: var(--primary); text-decoration: none;">luismoya02062004@gmail.com</a></p>
+        <!-- Sección Educación -->
+        <section class="section container">
+            <h2 class="section-tag">/ Educación</h2>
+            <div class="edu-card">
+                <h3>Análisis y Desarrollo de Software</h3>
+                <p>SENA | Centro de Gestión de Mercados, Logística y Tecnologías de la Información</p>
+                <span class="status-pill">En proceso de certificación</span>
             </div>
-            <a href="mailto:luismoya02062004@gmail.com" class="btn"
-                style="text-decoration: none; display: inline-block;">Contactarme</a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Mitel Bi. Construido con pasión y código limpio.</p>
+        <div class="footer-content container">
+            <p>Diseñado y desarrollado por <strong>Luiz Miguel Pineda Moya</strong></p>
+            <div class="socials">
+                <a href="https://github.com/elmimi22222" target="_blank">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, { threshold: 0.15 });
-
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    </script>
-
 </body>
-
 </html>
